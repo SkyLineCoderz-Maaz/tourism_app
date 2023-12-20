@@ -5,6 +5,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_button.dar
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_images.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenChangePassword extends StatelessWidget {
   const ScreenChangePassword({super.key});
 

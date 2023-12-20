@@ -6,6 +6,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_otp_code.d
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenOtp extends StatelessWidget {
   const ScreenOtp({super.key});
 
@@ -28,12 +30,12 @@ class ScreenOtp extends StatelessWidget {
           MediumText(
             text: 'Verification',
             color: Colors.black,
-            textPadding: EdgeInsets.only(right: 200),
+            // textPadding: EdgeInsets.only(right: 200),
           ),
           SmallText(
             text: 'Enter the OTP code sent to your email',
             color: Colors.black,
-            textPadding: EdgeInsets.only(right: 33, top: 10),
+            // textPadding: EdgeInsets.only(right: 33, top: 10),
           ),
           Spacer(),
           CustomOtpCode(),

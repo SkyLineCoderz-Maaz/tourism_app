@@ -6,6 +6,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_input_fiel
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_otp.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenForget extends StatelessWidget {
   const ScreenForget({super.key});
 
@@ -29,7 +31,7 @@ class ScreenForget extends StatelessWidget {
           LargeText(
             text: 'Forgot Password',
             color: Colors.black,
-            textPadding: EdgeInsets.only(right: 80),
+            // textPadding: EdgeInsets.only(right: 80),
           ),
           SizedBox(
             height: 10,
@@ -37,7 +39,7 @@ class ScreenForget extends StatelessWidget {
           SmallText(
             text: 'Enter your email to recover your password. ',
             color: Colors.black,
-            textPadding: EdgeInsets.only(right: 15),
+            // textPadding: EdgeInsets.only(right: 15),
           ),
           SizedBox(
             height: 100,

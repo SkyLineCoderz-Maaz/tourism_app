@@ -6,6 +6,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart'
 import 'package:tourism_app/modules/user_module/views/screens/screen_login.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_signup.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenSplash2 extends StatelessWidget {
   const ScreenSplash2({super.key});
 
@@ -26,12 +28,12 @@ class ScreenSplash2 extends StatelessWidget {
           MediumText(
             text: 'Grow Your Business',
             color: Colors.black,
-            textPadding: EdgeInsets.only(top: 20),
+            // textPadding: EdgeInsets.only(top: 20),
           ),
           SmallText(
             text: 'Provide best deal and services to grow your business.',
             color: Colors.grey,
-            textPadding: EdgeInsets.only(top: 10),
+            // textPadding: EdgeInsets.only(top: 10),
           ),
           Spacer(),
           CustomButton(

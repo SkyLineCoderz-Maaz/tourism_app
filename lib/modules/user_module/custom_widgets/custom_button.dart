@@ -5,7 +5,7 @@ class CustomButton extends StatefulWidget {
   final Color? color;
   final Color? textColor;
   final double? textFont;
-  final IconData? icon; // New parameter for custom icon
+  final Widget? icon; // New parameter for custom icon
   final String text;
   final double? width;
   final double? height;
@@ -72,7 +72,7 @@ class _CustomButtonState extends State<CustomButton> {
       onTap: widget.onPressed,
       child: Container(
         margin: widget.margin ?? const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-        height: widget.height,
+        height: widget.height ?? 45,
         width: widget.width,
         child: ElevatedButton(
           onLongPress: widget.onLongPressed,
@@ -94,15 +94,12 @@ class _CustomButtonState extends State<CustomButton> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if (widget.icon != null)
-                Icon(
-                  widget.icon,
-                  color: textColor,
-                ),
+                widget.icon!,
               SizedBox(width: widget.icon != null ? 8.0 : 0), // Adjust the spacing based on your needs
               Text(
                 widget.text,
                 textAlign: widget.textAlign ?? TextAlign.center,
-                style: widget.textStyle ?? TextStyle(color: textColor, fontSize: widget.textFont),
+                style: widget.textStyle ?? TextStyle(color: textColor, fontSize: widget.textFont?? 15),
               ),
             ],
           ),

@@ -7,6 +7,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_input_fiel
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenSignup extends StatelessWidget {
   const ScreenSignup({super.key});
 
@@ -20,7 +22,9 @@ class ScreenSignup extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          LargeText(text: 'Signup',color: Colors.black,textPadding: EdgeInsets.only(right: 200),),
+          LargeText(text: 'Signup',color: Colors.black,
+            // textPadding: EdgeInsets.only(right: 200),
+          ),
           LargeText(
             text: 'App Logo',
             color: Colors.black,
@@ -49,13 +53,13 @@ class ScreenSignup extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CustomButton(
-                  icon: Icons.facebook,
+                  // icon: Icons.facebook,
                   text: 'Facebook',
                   textFont: 16,
                   color: Colors.blue,
                   onPressed: () {}),
               CustomButton(
-                  icon: Icons.chrome_reader_mode,
+                  // icon: Icons.chrome_reader_mode,
                   color: Colors.black,
                   textFont: 16,
                   text: 'Google',

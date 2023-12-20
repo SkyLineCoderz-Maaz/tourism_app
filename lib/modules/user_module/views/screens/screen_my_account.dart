@@ -6,6 +6,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_input_fiel
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenMyAccount extends StatelessWidget {
   const ScreenMyAccount({super.key});
 

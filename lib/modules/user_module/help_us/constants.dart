@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 Color appColor = Color(0xFF2FB8A6);
 
@@ -72,4 +73,5 @@ Decoration roundedDec = BoxDecoration(
 );
 
 BoxShadow myShadow = BoxShadow(color: Colors.red);
-List<BoxShadow> appBoxShadow = [BoxShadow(blurRadius: 6, color: Color(0x414D5678))];
+
+List<BoxShadow> appBoxShadow = [BoxShadow(blurRadius: 5.sp, color: Color(0x414D5678))];

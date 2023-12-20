@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 
 class CustomInputField extends StatefulWidget {
   final String? hint;
@@ -122,9 +123,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
           //   color: Color(0xffdedede),
           // ),
           borderRadius: BorderRadius.circular(25),
-          boxShadow: [
-            BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 2)
-          ]),
+          boxShadow: appBoxShadow),
       child: TextFormField(
         maxLength: widget.limit,
         key: widget.key,

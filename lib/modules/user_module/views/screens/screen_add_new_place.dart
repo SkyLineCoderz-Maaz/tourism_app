@@ -5,6 +5,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_button.dar
 import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
 import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenAddNewPlace extends StatelessWidget {
   String selectedDuration = 'Per Night';
   @override
@@ -179,7 +181,7 @@ class ScreenAddNewPlace extends StatelessWidget {
                           MediumText(
                             text: "Uploaded Successfully",
                             color: appColor,
-                            fontWeight: FontWeight.w400,
+                            // fontWeight: FontWeight.w400,
                           )
                         ],
                       ),

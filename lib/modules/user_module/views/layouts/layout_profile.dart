@@ -11,6 +11,8 @@ import 'package:tourism_app/modules/user_module/views/screens/screen_my_account.
 import 'package:tourism_app/modules/user_module/views/screens/screen_my_rating.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_setting.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class LayoutProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class LayoutProfile extends StatelessWidget {
               LargeText(
                 text: 'App Logo',
                 color: Colors.black,
-              ).paddingOnly(top: 100, left: 150),
+              ),
 
               Icon(
                 CupertinoIcons.bell,

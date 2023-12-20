@@ -6,6 +6,8 @@ import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart'
 import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 import 'package:tourism_app/modules/user_module/models/select_places_category.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_add_new_place.dart';
+
+import '../../custom_widgets/Custom_text_widgets.dart';
 class ScreenPlaceCategory extends StatelessWidget {
   SelectPlacesCategory places;
   @override

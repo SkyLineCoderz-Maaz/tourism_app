@@ -8,6 +8,8 @@ import 'package:tourism_app/modules/user_module/help_us/constants.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_change_password.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_notification.dart';
 
+import '../../custom_widgets/Custom_text_widgets.dart';
+
 class ScreenSetting extends StatefulWidget {
   @override
   State<ScreenSetting> createState() => _ScreenSettingState();
