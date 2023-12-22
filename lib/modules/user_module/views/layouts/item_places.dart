@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 class ItemPlaces extends StatelessWidget {
   const ItemPlaces({Key? key}) : super(key: key);

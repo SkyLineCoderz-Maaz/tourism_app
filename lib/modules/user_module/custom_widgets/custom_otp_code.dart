@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:sizer/sizer.dart';
 class CustomOtpCode extends StatefulWidget {
   @override
   _CustomOtpCodeState createState() => _CustomOtpCodeState();
@@ -47,7 +48,7 @@ class _CustomOtpCodeState extends State<CustomOtpCode> {
                   AndroidSmsAutofillMethod.smsUserConsentApi,
               listenForMultipleSmsOnAndroid: true,
               defaultPinTheme: defaultPinTheme,
-              separatorBuilder: (index) => const SizedBox(width: 8),
+              separatorBuilder: (index) => const SizedBox(width: 15),
               validator: (value) {
                 return value == '2222' ? null : 'Pin is incorrect';
               },

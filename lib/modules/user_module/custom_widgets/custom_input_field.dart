@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 class CustomInputField extends StatefulWidget {
   final String? hint;

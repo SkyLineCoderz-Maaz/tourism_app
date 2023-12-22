@@ -2,7 +2,7 @@
 class Assets {
   Assets._();
 
-  static const String iconsFacebook (8) 1 = 'assets/icons/facebook (8) 1.svg';
+  static const String iconsFacebook = 'assets/icons/facebook.svg';
   static const String iconsGoogle = 'assets/icons/google.svg';
   static const String iconsIcGoogle = 'assets/icons/ic_google.png';
   static const String iconsWorld = 'assets/icons/world.svg';

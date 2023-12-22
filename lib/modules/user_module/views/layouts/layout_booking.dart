@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_active_booking.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_finished_booking.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_pending_booking.dart';

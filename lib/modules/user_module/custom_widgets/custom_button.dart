@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 class CustomButton extends StatefulWidget {
   final Color? color;
@@ -72,7 +74,7 @@ class _CustomButtonState extends State<CustomButton> {
       onTap: widget.onPressed,
       child: Container(
         margin: widget.margin ?? const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-        height: widget.height ?? 45,
+        height: widget.height ?? 33.sp,
         width: widget.width,
         child: ElevatedButton(
           onLongPress: widget.onLongPressed,
@@ -80,7 +82,7 @@ class _CustomButtonState extends State<CustomButton> {
           style: ElevatedButton.styleFrom(
             padding: widget.padding,
             elevation: widget.elevation,
-            shadowColor: widget.shadowColor,
+            shadowColor: widget.shadowColor??Color(0x414D5678),
             animationDuration: widget.animationDuration,
             primary: (widget.color ?? Color(0xff2FB8A6)),
             shape: widget.shape ??
@@ -99,7 +101,7 @@ class _CustomButtonState extends State<CustomButton> {
               Text(
                 widget.text,
                 textAlign: widget.textAlign ?? TextAlign.center,
-                style: widget.textStyle ?? TextStyle(color: textColor, fontSize: widget.textFont?? 15),
+                style: widget.textStyle ?? TextStyle(color: textColor, fontSize: widget.textFont?? 12.sp),
               ),
             ],
           ),

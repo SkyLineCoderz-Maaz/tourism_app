@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 import '../../custom_widgets/Custom_text_widgets.dart';
 

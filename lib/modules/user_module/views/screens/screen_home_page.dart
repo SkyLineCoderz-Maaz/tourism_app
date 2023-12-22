@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_bottom_navy_bar.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_booking.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_places.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_profile.dart';

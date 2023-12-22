@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_container.dart';
-import 'package:tourism_app/modules/user_module/custom_widgets/text_styles.dart';
-import 'package:tourism_app/modules/user_module/help_us/constants.dart';
+import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_change_password.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_notification.dart';
 
