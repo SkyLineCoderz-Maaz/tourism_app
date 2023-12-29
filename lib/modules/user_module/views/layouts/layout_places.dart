@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tourism_app/modules/user_module/custom_widgets/Custom_text_widgets.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
-import 'package:tourism_app/modules/user_module/models/select_places_category.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/item_places.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_place_category.dart';
 
 class LayoutPlaces extends StatelessWidget {
-late SelectPlacesCategory placesCategory;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: LargeText(text: 'My Places',),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.search,color: appColor,)),
+        ],
+      ),
       floatingActionButton:FloatingActionButton(
           onPressed: (){
-            Get.to(ScreenPlaceCategory(places:placesCategory,));
+            Get.to(ScreenPlaceCategory());
           },
         child: Icon(Icons.add,color: Colors.white,),
         backgroundColor: appColor,

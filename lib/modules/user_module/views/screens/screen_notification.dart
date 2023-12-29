@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 import '../../custom_widgets/custom_text_widgets.dart';
@@ -26,67 +27,30 @@ class ScreenNotification extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                height: 100,
-                width: Get.width,
+                height: 8.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: appBoxShadow,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    MediumText(
-                      text: 'Review',
-                      color: Colors.black,
-                    ).paddingOnly(right: 220, top: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        SmallText(
-                          text: 'Alex Jack give you a review',
-                          color: Colors.grey,
-                        ),
-                        Icon(
-                          CupertinoIcons.mail,
-                          color: appColor,
-                        ),
-                      ],
-                    ),
-                  ],
+                child: ListTile(
+                  title: MediumText(text: 'Review',),
+                  subtitle: SmallText(text: 'Alex Jack give you a review',color: Colors.grey,),
+                  trailing: IconButton(onPressed: (){},icon: Icon(CupertinoIcons.mail,color: appColor,),),
                 )),
-            SizedBox(height: 30,),
+            SizedBox(height: 30.sp,),
             Container(
-                height: 100,
-                width: Get.width,
+                height: 9.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: appBoxShadow,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    MediumText(
-                      text: 'Booking',
-                      color: Colors.black,
-                    ).paddingOnly(right: 220, top: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        SmallText(
-                          text:
-                              'You have a new booking from \nAlex Jack on 07 Dec 2021.',
-                          color: Colors.grey,
-                        ),
-                        Icon(
-                          CupertinoIcons.mail,
-                          color: appColor,
-                        ),
-                      ],
-                    ),
-                  ],
+                child: ListTile(
+                  title: MediumText(text: 'Booking',),
+                  subtitle: SmallText(text: 'You have a new booking from Alex Jack on 07 Dec 2021.',color: Colors.grey,),
+                  trailing: IconButton(onPressed: (){},icon: Icon(CupertinoIcons.mail_solid),),
                 )),
           ],
-        ).paddingSymmetric(horizontal: 30),
+        ).paddingSymmetric(horizontal: 20.sp),
       ),
     );
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tourism_app/modules/user_module/custom_widgets/Custom_text_widgets.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_active_booking.dart';
 import 'package:tourism_app/modules/user_module/views/layouts/layout_finished_booking.dart';
@@ -18,12 +20,12 @@ class LayoutBooking extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Booking"),
+            title: LargeText(text: 'Booking',),
             actions: [Icon(Icons.search)],
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(90),
               child: Container(
-                height: 50,
+                height: 6.h,
                 padding: EdgeInsets.all(5),
                 margin: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(

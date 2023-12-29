@@ -7,6 +7,7 @@ import 'package:tourism_app/modules/user_module/custom_widgets/custom_button.dar
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_input_field.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_forget.dart';
+import 'package:tourism_app/modules/user_module/views/screens/screen_home_page.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_signup.dart';
 
 import '../../custom_widgets/custom_text_widgets.dart';
@@ -50,7 +51,7 @@ class ScreenLogin extends StatelessWidget {
                       "Forgot Password?",
                       style: TextStyle(color: Colors.black),
                     ))),
-            CustomButton(text: "Login", onPressed: () {}).marginSymmetric(vertical: 20),
+            CustomButton(text: "Login", onPressed: () {Get.off(ScreenHomePage());}).marginSymmetric(vertical: 20),
             Row(
               children: [
                 Expanded(

@@ -26,22 +26,15 @@ class LayoutProfile extends StatelessWidget {
                   name: 'profile_background',
                   width: Get.width,
                 ),
-                Align(
-        
-                  child: ExtraLargeText(
-                    text: 'App Logo',
-                  ),
-                ),
-        
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Icon(
-                    CupertinoIcons.bell,
-                    color: Colors.black,
-                  ),
-                ),
+                ExtraLargeText(
+                  text: 'App Logo',
+                ).paddingOnly(top:90.sp,left: 120.sp),
+                Icon(
+                  CupertinoIcons.bell,
+                  color: Colors.black,
+                ).paddingOnly(top: 40.sp,left: 260.sp),
                 CircleAvatar(
-                  radius: 45,
+                  radius: 35.sp,
                   backgroundImage: AssetImage('assets/images/person.png'),
                 ).paddingOnly(top: 150.sp, left: 15.sp),
               ],
@@ -62,10 +55,7 @@ class LayoutProfile extends StatelessWidget {
                   onPressed: () {
                     Get.to(ScreenMyAccount());
                   },
-                ),
-                SizedBox(
-                  height: 20.sp,
-                ),
+                ).marginSymmetric(vertical: 15.sp),
                 CustomContainer(
                   height: 50.sp,
                   color: Colors.white,
@@ -77,10 +67,7 @@ class LayoutProfile extends StatelessWidget {
                   onPressed: () {
                     Get.to(ScreenSetting());
                   },
-                ),
-                SizedBox(
-                  height: 20.sp,
-                ),
+                ).marginSymmetric(vertical: 15.sp),
                 CustomContainer(
                   height: 50.sp,
                   color: Colors.white,
@@ -92,10 +79,7 @@ class LayoutProfile extends StatelessWidget {
                   onPressed: () {
                     Get.to(ScreenMyRating());
                   },
-                ),
-                SizedBox(
-                  height: 20.sp,
-                ),
+                ).marginSymmetric(vertical: 15.sp),
                 CustomContainer(
                   height: 50.sp,
                   color: Colors.white,
@@ -107,7 +91,7 @@ class LayoutProfile extends StatelessWidget {
                   onPressed: () {
                     Get.to(ScreenHelp());
                   },
-                ),
+                ).marginSymmetric(vertical: 15.sp),
               ],
             ).paddingSymmetric(horizontal: 20.sp),
           ],

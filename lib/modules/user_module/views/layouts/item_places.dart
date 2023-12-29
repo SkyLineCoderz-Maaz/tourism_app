@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
+import 'package:tourism_app/modules/user_module/custom_widgets/Custom_text_widgets.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 
 class ItemPlaces extends StatelessWidget {
@@ -19,7 +20,6 @@ class ItemPlaces extends StatelessWidget {
           children: [
             Container(
               height: Get.height * .15,
-              width: Get.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
                 image: DecorationImage(
@@ -29,19 +29,19 @@ class ItemPlaces extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text("Grand Royle Hotel"),
+              title:MediumText(text: 'Grand Royle Hotel',),
               trailing: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Text("\$ 220"),
-                  Text("Per Night"),
+                  SmallText(text:"\$ 220",color: appColor,),
+                  SmallText(text:"per night",color: Colors.grey,),
                 ],
               ),
               subtitle: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text("Location Name"),
+                  SmallText(text:"Location Name",color: Colors.grey,),
                   RatingBar.builder(
                     initialRating: 3,
                     minRating: 1,

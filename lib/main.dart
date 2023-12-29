@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         // home: ScreenSplash(),
-        home: LayoutProfile(),
+        home: ScreenBookingDetail(),
       );
     },);
   }

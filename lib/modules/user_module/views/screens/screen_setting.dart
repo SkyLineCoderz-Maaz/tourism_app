@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:sizer/sizer.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_container.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_change_password.dart';
@@ -16,6 +17,7 @@ class ScreenSetting extends StatefulWidget {
 
 class _ScreenSettingState extends State<ScreenSetting> {
   bool _isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,59 +34,85 @@ class _ScreenSettingState extends State<ScreenSetting> {
           icon: Icon(Icons.arrow_back_ios),
         ),
       ),
-      body:Column(
+      body: Column(
         children: [
-          CustomContainer(
-            height: 70,
-            color: Colors.white,
-            textColor: Colors.black,
-            icon: CupertinoIcons.bell,
-            iconColor: appColor,
-            text: 'Notification',
-            onPressed: (){
-              Get.to(ScreenNotification());
-            },
-            textPadding: EdgeInsets.only(right:110),
-            child:        Switch(
-              value: _isSwitched,
-              onChanged: (value) {
-                setState(() {
-                  _isSwitched = value;
-                });
-              },
-              activeTrackColor: Colors.green,
-              activeColor: Colors.white,
-            ),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    CupertinoIcons.bell,
+                    color: appColor,
+                  )).marginSymmetric(horizontal: 10.sp),
+              TextButton(
+                  onPressed: () {
+                    Get.to(ScreenNotification());
+                  },
+                  child: MediumText(
+                    text: 'Notification',
+                  )),
+              SizedBox(width: 30.w,),
+              Switch(
+                value: _isSwitched,
+                onChanged: (value) {
+                  setState(() {
+                    _isSwitched = value;
+                  });
+                },
+                activeTrackColor: Colors.green,
+                activeColor: Colors.white,
+              ),
+            ],
           ),
-          CustomContainer(
-            height: 70,
-            color: Colors.white,
-            textColor: Colors.black,
-            icon: Icons.lock,
-            iconColor: appColor,
-            text: 'Change Password',
-            textPadding: EdgeInsets.only(right:180),
-            onPressed: (){
-              Get.to(ScreenChangePassword());
-            },
+          Divider(),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.lock,
+                    color: appColor,
+                  )).marginSymmetric(horizontal: 10.sp),
+              TextButton(
+                  onPressed: () {
+                    Get.to(ScreenChangePassword());
+                  },
+                  child: MediumText(
+                    text: 'Change Password',
+                  )),
+            ],
           ),
-          CustomContainer(
-            height: 70,
-            color: Colors.white,
-            textColor: Colors.black,
-            icon: Icons.book,
-            iconColor: appColor,
-            text: 'Terms and Conditions',
-            textPadding: EdgeInsets.only(right:150),
+          Divider(),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.book,
+                    color: appColor,
+                  )).marginSymmetric(horizontal: 10.sp),
+              TextButton(
+                  onPressed: () {},
+                  child: MediumText(
+                    text: 'Terms and Conditions',
+                  )),
+            ],
           ),
-          CustomContainer(
-            height: 70,
-            color: Colors.white,
-            textColor: Colors.black,
-            icon: Icons.login_outlined,
-            iconColor: appColor,
-            text: 'Logout',
-            textPadding: EdgeInsets.only(right:250),
+          Divider(),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.login_outlined,
+                    color: appColor,
+                  )).marginSymmetric(horizontal: 10.sp),
+              TextButton(
+                  onPressed: () {},
+                  child: MediumText(
+                    text: 'Logout',
+                  )),
+            ],
           ),
         ],
       ),
