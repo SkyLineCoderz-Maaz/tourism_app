@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:sizer/sizer.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_button.dart';
 import 'package:tourism_app/modules/user_module/custom_widgets/custom_images.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
@@ -27,9 +28,6 @@ class _ScreenOverviewState extends State<ScreenOverview> {
       body: Stack(
         children: [
           Container(
-            width: Get.width,
-            height: Get.height,
-            // margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 boxShadow: appBoxShadow,
                 color: Colors.white,
@@ -39,85 +37,78 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                 children: [
                   Container(
                     height: Get.height * .23,
-                    width: Get.width,
                     decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(15)),
                         image: DecorationImage(
                             image: AssetImage("assets/images/places.png"),
                             fit: BoxFit.cover)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Get.back(result: true);
-                          },
-                          icon: Icon(Icons.arrow_back_ios),
-                          color: Colors.white,
+                    child: SafeArea(
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Get.back(result: true);
+                              },
+                              icon: Icon(Icons.arrow_back_ios),
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 6.h,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle
+                              ),
+                              child: Icon(CupertinoIcons.pen,color: appColor,size:40,),
+                            ),
+                          ],
                         ),
-                        Container(
-                          height: 60,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle
-                          ),
-                          child: Icon(CupertinoIcons.pen,color: appColor,size:40,),
-                        ),
-                      ],
-                    ).paddingOnly(bottom:80),
+                      ),
+                    ),
                   ),
-                  ListTile(
-                    title: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        MediumText(
-                          text: 'Grand Royale',
-                          color: Colors.black,
-                        ),
-                        MediumText(
-                          text: 'Park Hotel',
-                          color: Colors.black,
-                        ),
-                      ],
-                    ),
-                    trailing: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        MediumText(
-                          text: "\$ 220",
-                          color: appColor,
-                        ),
-                        SmallText(
-                          text: "Per Night",
-                          color: Colors.black,
-                        ),
-                      ],
-                    ),
-                    subtitle: RichText(
-                        text: TextSpan(
-                            style: TextStyle(color: Colors.black),
-                            text: "Location name",
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          MediumText(text: 'Grand Royale\nPark Hotel'),
+                          Column(
                             children: [
-                          TextSpan(text: ""),
-                          TextSpan(text: " 2 miles away"),
-                        ])).marginSymmetric(vertical: 30),
+                              MediumText(text: "\$220",color: appColor,),
+                              SmallText(text: 'Per Night'),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SmallText(text: 'Location Name'),
+                          Icon(CupertinoIcons.location_solid,size: 12.sp,color: appColor,),
+                          Text('2 miles away'),
+                        ],
+                      ),
+                    ],
+                  ).marginSymmetric(horizontal: 10.sp),
+                  Divider(color:Colors.grey.withOpacity(.3),),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: MediumText(
+                      text: 'Summary',
+                    ),
+                  ).marginSymmetric(horizontal: 10.sp),
+                  SizedBox(
+                    height: 2.sp,
                   ),
-                  Divider(),
-                  MediumText(
-                    text: 'Summary',
-                    color: Colors.black,
-                  ).paddingOnly(right: 300),
                   SmallText(
                     text:
                         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.',
-                    color: Colors.black54,
-                  ),
+                  ).marginOnly(left: 10.sp),
+                  SizedBox(height: 15.sp,),
                   Container(
-                    height: Get.height * .30,
+                    height: Get.height * .35,
                     width: Get.width * .9,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -125,53 +116,44 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: [
-                            LargeText(
-                              text: '4.2',
-                              color: appColor,
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                MediumText(
-                                  text: 'Overall Rating',
-                                  color: Colors.black,
-                                ),
-                                RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 15,
-                                  itemPadding:
-                                      EdgeInsets.symmetric(horizontal: 1.0),
-                                  itemBuilder: (context, _) => Icon(
-                                    Icons.star,
-                                    size: 5,
-                                    color: Colors.amber,
+                        ListTile(
+                          title: Row(
+                            children: [
+                              ExtraLargeText(text: '4.2',color: appColor,),
+                              SizedBox(width: 10.sp,),
+                              Column(
+                                children: [
+                                  MediumText(
+                                    text: 'Overall Rating'
                                   ),
-                                  onRatingUpdate: (rating) {
-                                    print(rating);
-                                  },
-                                ).paddingOnly(right: 40)
-                              ],
-                            ),
-                          ],
+                                  RatingBar.builder(
+                                    initialRating: 4,
+                                    minRating: 1,
+                                    direction: Axis.horizontal,
+                                    allowHalfRating: true,
+                                    itemCount: 5,
+                                    itemSize: 15,
+                                    itemPadding:
+                                    EdgeInsets.symmetric(horizontal: 1.0),
+                                    itemBuilder: (context, _) => Icon(
+                                      Icons.star,
+                                      size: 5,
+                                      color: Colors.amber,
+                                    ),
+                                    onRatingUpdate: (rating) {
+                                      print(rating);
+                                    },
+                                  ).paddingOnly(right: 30.sp)
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             SmallText(
                               text: 'Place',
-                              color: Colors.black,
                             ),
                             Slider(
                               value: _currentSliderValue,
@@ -194,7 +176,6 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           children: [
                             SmallText(
                               text: 'Service',
-                              color: Colors.black,
                             ),
                             Slider(
                               value: currentSliderValue,
@@ -217,7 +198,6 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           children: [
                             SmallText(
                               text: 'price',
-                              color: Colors.black,
                             ),
                             Slider(
                               value: sliderValue,
@@ -240,7 +220,6 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           children: [
                             SmallText(
                               text: 'Quality',
-                              color: Colors.black,
                             ),
                             Slider(
                               value: values,
@@ -259,17 +238,16 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           ],
                         ),
                       ],
-                    ),
+                    ).marginSymmetric(vertical: 10.sp),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 15.sp,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SmallText(
                         text: 'Photos',
-                        color: Colors.black,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -281,16 +259,16 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                         ),
                       ),
                     ],
-                  ),
+                  ).marginSymmetric(horizontal: 10.sp),
                   SizedBox(
-                    height: 20,
+                    height: 15.sp,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
                         SizedBox(
-                          width: 10,
+                          width: 10.sp,
                         ),
                         Container(
                           height: 100,
@@ -303,7 +281,7 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 10.sp,
                         ),
                         Container(
                           height: 100,
@@ -316,7 +294,7 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 10.sp,
                         ),
                         Container(
                           height: 100,
@@ -329,7 +307,7 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 10.sp,
                         ),
                         Container(
                           height: 100,
@@ -345,7 +323,7 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.sp,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -359,8 +337,8 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                         color: appColor,
                       ),
                     ],
-                  ),
-                  Divider(),
+                  ).marginSymmetric(horizontal: 10.sp),
+                  Divider(color: Colors.grey.withOpacity(.3),),
                   ListTile(
                     leading: Image.asset('assets/images/person.png'),
                     title: MediumText(
@@ -392,12 +370,11 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                   SmallText(
                     text:
                         'Review text popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature',
-                    color: Colors.black,
-                  ),
+                  ).marginOnly(left: 10.sp),
                   SizedBox(
-                    height: 20,
+                    height: 20.sp,
                   ),
-                  Divider(),
+                  Divider(color: Colors.grey.withOpacity(.3),),
                   ListTile(
                     leading: Image.asset('assets/images/person.png'),
                     title: MediumText(
@@ -429,19 +406,17 @@ class _ScreenOverviewState extends State<ScreenOverview> {
                   SmallText(
                     text:
                         'Review text popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature',
-                    color: Colors.black,
-                  ),
+                  ).marginOnly(left: 10.sp),
                   SizedBox(
-                    height: 20,
+                    height: 15.sp,
                   ),
                   CustomImages(
                     name: 'map',
                     width: Get.width,
                   ),
                   CustomButton(
-                      width: Get.width * .5,
                       text: 'Book Now',
-                      onPressed: () {}),
+                      onPressed: () {}).marginSymmetric(horizontal: 30.sp),
                 ],
               ),
             ),

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tourism_app/modules/user_module/custom_widgets/custom_container.dart';
 import 'package:tourism_app/modules/user_module/helpers/constants.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_change_password.dart';
 import 'package:tourism_app/modules/user_module/views/screens/screen_notification.dart';
+import 'package:tourism_app/modules/user_module/views/screens/screen_splash.dart';
 
 import '../../custom_widgets/Custom_text_widgets.dart';
 
@@ -67,12 +67,7 @@ class _ScreenSettingState extends State<ScreenSetting> {
           Divider(),
           Row(
             children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.lock,
-                    color: appColor,
-                  )).marginSymmetric(horizontal: 10.sp),
+              Image.asset('assets/icons/password .png').marginSymmetric(horizontal: 19.sp),
               TextButton(
                   onPressed: () {
                     Get.to(ScreenChangePassword());
@@ -85,12 +80,7 @@ class _ScreenSettingState extends State<ScreenSetting> {
           Divider(),
           Row(
             children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.book,
-                    color: appColor,
-                  )).marginSymmetric(horizontal: 10.sp),
+              Image.asset('assets/icons/conditions.png').marginSymmetric(horizontal: 19.sp),
               TextButton(
                   onPressed: () {},
                   child: MediumText(
@@ -102,13 +92,16 @@ class _ScreenSettingState extends State<ScreenSetting> {
           Row(
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.offAll(ScreenSplash());},
                   icon: Icon(
                     Icons.login_outlined,
                     color: appColor,
-                  )).marginSymmetric(horizontal: 10.sp),
+                  )).marginSymmetric(horizontal: 12.sp),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.offAll(ScreenSplash());
+                  },
                   child: MediumText(
                     text: 'Logout',
                   )),

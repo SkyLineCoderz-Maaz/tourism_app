@@ -47,14 +47,14 @@ class BottomNavyBarState extends State<ScreenHomePage> {
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
             inactiveColor: Colors.black,
-            icon: const Icon(Icons.apps),
+            icon: const Icon(Icons.home),
             title: const Text('Booking'),
             activeColor: appColor,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             inactiveColor: Colors.black,
-            icon: const Icon(Icons.place),
+            icon: const Icon(Icons.business_sharp),
             title: const Text('Place'),
             activeColor: appColor,
             textAlign: TextAlign.center,
@@ -62,7 +62,7 @@ class BottomNavyBarState extends State<ScreenHomePage> {
 
           BottomNavyBarItem(
             inactiveColor: Colors.black,
-            icon: const Icon(Icons.account_box),
+            icon: const Icon(Icons.person_pin),
             title: const Text('Account'),
             activeColor: appColor,
             textAlign: TextAlign.center,

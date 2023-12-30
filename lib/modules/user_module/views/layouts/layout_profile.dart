@@ -29,10 +29,7 @@ class LayoutProfile extends StatelessWidget {
                 ExtraLargeText(
                   text: 'App Logo',
                 ).paddingOnly(top:90.sp,left: 120.sp),
-                Icon(
-                  CupertinoIcons.bell,
-                  color: Colors.black,
-                ).paddingOnly(top: 40.sp,left: 260.sp),
+                Image.asset('assets/icons/bell.png',).paddingOnly(top: 40.sp,left: 260.sp),
                 CircleAvatar(
                   radius: 35.sp,
                   backgroundImage: AssetImage('assets/images/person.png'),
@@ -83,7 +80,7 @@ class LayoutProfile extends StatelessWidget {
                 CustomContainer(
                   height: 50.sp,
                   color: Colors.white,
-                  icon: Icons.question_mark_outlined,
+                  icon: Icons.question_mark_rounded,
                   iconColor: appColor,
                   text: 'Help',
                   textColor: Colors.black,

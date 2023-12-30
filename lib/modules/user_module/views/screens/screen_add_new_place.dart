@@ -31,20 +31,17 @@ class ScreenAddNewPlace extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: Get.height * .3,
+              height: Get.height * .2,
               width: Get.width * .9,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.black38)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image.asset('assets/icons/photo (2) 1.png'),
                   SizedBox(height: 1.h,),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.picture_as_pdf_outlined),
-                  ),
-                  SizedBox(height: 2.h,),
                   MediumText(
                     text: 'Add Images',
                     color: Colors.black,
