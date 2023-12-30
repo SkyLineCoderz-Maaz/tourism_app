@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tourism_app/modules/user_module/views/screens/screen_booking_detail.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tourism_app/modules/user_module/views/screens/screen_splash.dart';
+import 'package:tourism_app/modules/business_module/views/screens/screen_splash.dart';
 void main() {
   runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
